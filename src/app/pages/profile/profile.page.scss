@@ -1,0 +1,20 @@
+ion-icon {
+    font-size: 24px;
+  }
+  
+  ion-icon[aria-hidden='true'] {
+    color: var(--ion-color-primary);
+  }
+  
+  ion-icon[name='arrow-up'] {
+    color: green;
+  }
+  
+  ion-icon[name='arrow-down'] {
+    color: red;
+  }
+  
+  ion-icon[name='arrow-forward'] {
+    color: gray;
+  }
+  

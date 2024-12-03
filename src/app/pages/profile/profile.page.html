@@ -1,13 +1,35 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>Moedas em tempo real</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-button (click)="updateCurrencies()">Atualizar Moedas</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let currency of objectKeys(currencies)">
+      <ion-label>
+        <h2>{{ currency }}</h2>
+        <p>Taxa: {{ currencies[currency] }}</p> <!-- Acesso direto à taxa -->
+      </ion-label>
+      <!-- Exibir o ícone de tendência -->
+      <ion-icon [name]="getTrendIcon(currency)" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <h3>Moedas em Alta</h3>
+        <p>{{ currenciesUp.join(', ') }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h3>Moedas em Baixa</h3>
+        <p>{{ currenciesDown.join(', ') }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
