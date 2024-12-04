@@ -8,12 +8,12 @@ type CurrencyRates = { [key: string]: number };
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  fromCurrency: string = 'USD'; // Moeda de origem
-  toCurrency: string = 'BRL'; // Moeda de destino
-  amount: number = 1; // Valor a ser convertido
-  convertedValue: number | null = null; // Resultado da conversão
+  fromCurrency: string = 'USD'; 
+  toCurrency: string = 'BRL'; 
+  amount: number = 1; 
+  convertedValue: number | null = null; 
 
-  // Lista de moedas e suas taxas
+  
   currencies: CurrencyRates = {
     "USD":1,
   "AED":3.6725,
@@ -181,7 +181,7 @@ export class HomePage {
 
   constructor() {}
 
-  // Método para calcular a conversão
+  
   convert() {
     if (!this.fromCurrency || !this.toCurrency || !this.amount) {
       alert('Preencha todos os campos!');
@@ -192,14 +192,14 @@ export class HomePage {
     const toRate = this.currencies[this.toCurrency];
 
     if (fromRate && toRate) {
-      // Calcula o valor convertido
+      
       this.convertedValue = (this.amount / fromRate) * toRate;
     } else {
       alert('Erro: Moeda não encontrada!');
     }
   }
 
-  // Método para retornar as chaves do objeto currencies
+  
   objectKeys(obj: object) {
     return Object.keys(obj);
   }

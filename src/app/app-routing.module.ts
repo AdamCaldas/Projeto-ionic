@@ -35,14 +35,8 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
-  {
-    path: 'settings',
-    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
-  },
-  {
-    path: 'moedas',
-    loadChildren: () => import('./moedas/moedas.module').then( m => m.MoedasPageModule)
-  },
+  
+ 
 ];
 
 @NgModule({

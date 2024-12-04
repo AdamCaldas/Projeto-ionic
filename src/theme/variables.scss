@@ -1,2 +1,19 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+body [color-theme='dark']{
+    color :#292929;
+    background-color: #292929;
+    
+
+};
+
+.ios body [color-theme='dark']{
+    color: #292929;
+    background-color: #292929;
+}
+
+.md body [color-theme='dark'] {
+    color: #292929;
+    background-color: #292929;
+}

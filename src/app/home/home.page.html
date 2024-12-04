@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-grid>
-    <!-- Seleção de moeda de origem -->
+
     <ion-row>
       <ion-col>
         <ion-item>
@@ -20,7 +20,6 @@
       </ion-col>
     </ion-row>
 
-    <!-- Seleção de moeda de destino -->
     <ion-row>
       <ion-col>
         <ion-item>
@@ -34,7 +33,7 @@
       </ion-col>
     </ion-row>
 
-    <!-- Entrada de valor -->
+    
     <ion-row>
       <ion-col>
         <ion-item>
@@ -44,14 +43,14 @@
       </ion-col>
     </ion-row>
 
-    <!-- Botão para converter -->
+    
     <ion-row>
       <ion-col>
         <ion-button expand="full" (click)="convert()">Converter</ion-button>
       </ion-col>
     </ion-row>
 
-    <!-- Exibição do resultado -->
+    
     <ion-row>
       <ion-col>
         <ion-card *ngIf="convertedValue">

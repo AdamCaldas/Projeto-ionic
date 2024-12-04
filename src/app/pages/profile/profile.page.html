@@ -11,9 +11,9 @@
     <ion-item *ngFor="let currency of objectKeys(currencies)">
       <ion-label>
         <h2>{{ currency }}</h2>
-        <p>Taxa: {{ currencies[currency] }}</p> <!-- Acesso direto à taxa -->
+        <p>Taxa: {{ currencies[currency] }}</p>
       </ion-label>
-      <!-- Exibir o ícone de tendência -->
+      
       <ion-icon [name]="getTrendIcon(currency)" slot="end"></ion-icon>
     </ion-item>
   </ion-list>

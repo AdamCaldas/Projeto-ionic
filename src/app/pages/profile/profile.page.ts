@@ -14,9 +14,9 @@ export class ProfilePage {
 
   constructor() {}
 
-  // Função para carregar as moedas (simulando com dados fixos ou API)
+ 
   loadCurrencies() {
-    // Simulando a obtenção de dados da API de câmbio
+    
     this.currencies = {
       USD: { rate: 1.00, trend: 'up' },
       EUR: { rate: 0.9472, trend: 'down' },
@@ -24,11 +24,10 @@ export class ProfilePage {
       JPY: { rate: 149.92, trend: 'down' },
     };
 
-    // Atualiza as listas de moedas em alta e em baixa
+  
     this.compareRates();
   }
 
-  // Função para comparar as taxas e determinar quais moedas estão em alta ou baixa
   compareRates() {
     const currencyArray = Object.keys(this.currencies);
 
@@ -45,25 +44,25 @@ export class ProfilePage {
     });
   }
 
-  // Função para obter o ícone de tendência (seta)
+  
   getTrendIcon(currency: string): string {
     const trend = this.currencies[currency]?.trend;
 
     if (trend === 'up') {
-      return 'arrow-up'; // Seta para cima quando a moeda está em alta
+      return 'arrow-up'; 
     } else if (trend === 'down') {
-      return 'arrow-down'; // Seta para baixo quando a moeda está em baixa
+      return 'arrow-down'; 
     } else {
-      return 'arrow-forward'; // Moeda está estável, seta neutra
+      return 'arrow-forward'; 
     }
   }
 
-  // Função chamada quando o botão é pressionado para atualizar as moedas
+  
   updateCurrencies() {
     this.loadCurrencies();
   }
 
-  // Função para retornar as chaves do objeto currencies
+  
   objectKeys(obj: object) {
     return Object.keys(obj);
   }
